@@ -30,12 +30,8 @@ android {
       keyAlias = "upload"
       keyPassword = System.getenv("KEY_PASSWORD")
     }
-    create("debugConfig") {
-      storeFile = file("${rootDir}/debug.keystore")
-      storePassword = "android"
-      keyAlias = "androiddebugkey"
-      keyPassword = "android"
-    }
+    // debugConfig убран: отладочная сборка использует стандартный автогенерируемый
+    // debug-ключ (~/.android/debug.keystore), отдельный файл в проекте не нужен.
   }
 
   buildTypes {
@@ -45,7 +41,8 @@ android {
       proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
       signingConfig = signingConfigs.getByName("release")
     }
-    debug { signingConfig = signingConfigs.getByName("debugConfig") }
+    // Подпись debug-сборки — встроенным механизмом Gradle/AGP (default debug keystore)
+    debug { }
   }
   compileOptions {
     sourceCompatibility = JavaVersion.VERSION_11
