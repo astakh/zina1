@@ -1,0 +1,6 @@
+{
+  "name": "Зинаида",
+  "description": "Локальный автономный голосовой ассистент Зинаида с фоновым распознаванием без интернета",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

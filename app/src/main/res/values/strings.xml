@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Зинаида</string>
+    <string name="service_notification_title">Ассистент Зинаида активен</string>
+    <string name="service_notification_listening">Слушаю в фоне (скажите «Зинаида»)</string>
+    <string name="service_notification_processing">Обработка команды…</string>
+    <string name="service_notification_channel">Фоновый голосовой ассистент</string>
+    <string name="wake_word">зинаида</string>
+</resources>
